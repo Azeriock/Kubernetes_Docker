@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.8-buster
 LABEL maintainer="Loic" email="loicpierret@live.fr"
 COPY requirements.txt student_age.py /
 RUN apt update -y && apt install python-dev python3-dev libsasl2-dev python-dev libldap2-dev libssl-dev -y
