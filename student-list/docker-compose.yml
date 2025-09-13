@@ -13,7 +13,7 @@ services:
           - front-end
           - back-end
         depends_on: 
-          - api
+          - backend
     backend:
       container_name: api
       image: api:v1.0
