@@ -21,8 +21,8 @@ services:
         - back-end
       volumes:
         - ./simple_api/student_age.json:/data/student_age.json
-      ports:
-        - 5000:5000
+#     ports:
+#       - 5000:5000
 
 networks:
   front-end: {}
