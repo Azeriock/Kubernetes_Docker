@@ -1,0 +1,31 @@
+services:
+    frontend:
+        container_name: webpage
+        image: php:apache
+        environment:
+          - USERNAME=toto
+          - PASSWORD=python
+        ports:
+          - 80:80
+        volumes:
+          - ./website:/var/www/html
+        networks:
+          - front-end
+          - back-end
+        depends_on: 
+          - backend
+    backend:
+      container_name: api
+      image: api:v1.0
+      networks:
+        - back-end
+      volumes:
+        - ./simple_api/student_age.json:/data/student_age.json
+      ports:
+        - 5000:5000
+
+networks:
+  front-end: {}
+  back-end: {}
+      
+        
