@@ -13,7 +13,7 @@ services:
           - front-end
           - back-end
         depends_on: 
-          - backend
+          - api
     backend:
       container_name: api
       image: api:v1.0
@@ -27,5 +27,3 @@ services:
 networks:
   front-end: {}
   back-end: {}
-      
-        
