@@ -8,7 +8,7 @@ resources:
   - wordpress-secret.yml
   - pv-mysql.yml
   - pvc-mysql.yml
-  - mysql-Deployment.yml
-  - wordpress-Deployment.yml
+  - mysql-deployment.yml
+  - wordpress-deployment.yml
   - wordpress-nodeport.yml
   - mysql-cluster_ip.yml
