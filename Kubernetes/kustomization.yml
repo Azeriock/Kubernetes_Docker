@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: wordpress
+
+resources:
+  - wordpress-namespace.yml
+  - wordpress-secret.yml
+  - pv-mysql.yml
+  - pvc-mysql.yml
+  - mysql-Deployment.yml
+  - wordpress-Deployment.yml
+  - wordpress-nodeport.yml
+  - mysql-cluster_ip.yml
