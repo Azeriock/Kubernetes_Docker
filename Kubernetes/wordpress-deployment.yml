@@ -13,9 +13,6 @@ spec:
       labels:
         app: wordpress
     spec:
-      securityContext:
-        runAsUser: 33   # UID de www-data
-        fsGroup: 33     # GID de www-data, applique les permissions sur tous les volumes
       containers:
       - name: wordpress-container
         image: wordpress:latest
