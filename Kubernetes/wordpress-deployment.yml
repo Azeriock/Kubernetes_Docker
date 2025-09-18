@@ -20,7 +20,7 @@ spec:
             - containerPort: 80
           env:
             - name: WORDPRESS_DB_HOST
-              value: mysql
+              value: mysql-cluster-ip  # Correspond au nom du service MYSQL
             - name: WORDPRESS_DB_USER
               value: loic
             - name: WORDPRESS_DB_NAME
