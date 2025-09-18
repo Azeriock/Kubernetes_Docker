@@ -29,7 +29,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: mysql-secret
-                  key: wordpress_db_password
+                  key: mysql_password
           volumeMounts:
             - name: wordpress-volume
               mountPath: /var/www/html
