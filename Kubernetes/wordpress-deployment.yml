@@ -13,6 +13,9 @@ spec:
       labels:
         app: wordpress
     spec:
+      securityContext:
+        runAsUser: 33   # UID de www-data
+        fsGroup: 33     # GID de www-data, applique les permissions sur tous les volumes
       containers:
       - name: wordpress-container
         image: wordpress:latest
@@ -30,11 +33,11 @@ spec:
               secretKeyRef:
                 name: mysql-secret
                 key: mysql_password
-        volumeMounts:
-          - name: wordpress-volume
-            mountPath: /var/www/html
-      volumes:
-        - name: wordpress-volume
-          hostPath:
-            path: /data-wordpress
-            type: DirectoryOrCreate
+#        volumeMounts:
+#          - name: wordpress-volume
+#            mountPath: /var/www/html
+#      volumes:
+#        - name: wordpress-volume
+#          hostPath:
+#            path: /data-wordpress
+#            type: DirectoryOrCreate
