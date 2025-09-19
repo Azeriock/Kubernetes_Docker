@@ -30,11 +30,11 @@ spec:
               secretKeyRef:
                 name: mysql-secret
                 key: mysql_password
-#        volumeMounts:
-#          - name: wordpress-volume
-#            mountPath: /var/www/html
-#      volumes:
-#        - name: wordpress-volume
-#          hostPath:
-#            path: /data-wordpress
-#            type: DirectoryOrCreate
+        volumeMounts:
+          - name: wordpress-volume
+            mountPath: /var/www/html
+      volumes:
+        - name: wordpress-volume
+          hostPath:
+            path: /data-wordpress
+            type: DirectoryOrCreate

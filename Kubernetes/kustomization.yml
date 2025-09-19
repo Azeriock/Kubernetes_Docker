@@ -6,8 +6,8 @@ namespace: wordpress
 resources:
   - wordpress-namespace.yml
   - wordpress-secret.yml
-#  - pv-mysql.yml
-#  - pvc-mysql.yml
+  - pv-mysql.yml
+  - pvc-mysql.yml
   - mysql-deployment.yml
   - wordpress-deployment.yml
   - wordpress-nodeport.yml
