@@ -24,15 +24,9 @@ spec:
             - name: MYSQL_USER
               value: loic
             - name: MYSQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: mysql-secret
-                  key: mysql_password
+              value: secret
             - name: MYSQL_ROOT_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: mysql-secret
-                  key: mysql_random_root_password
+              value: secret
           volumeMounts:
             - name: mysql-storage
               mountPath: /var/lib/mysql
