@@ -24,9 +24,15 @@ spec:
             - name: MYSQL_USER
               value: loic
             - name: MYSQL_PASSWORD
-              value: secret
-            - name: MYSQL_ROOT_PASSWORD
-              value: secret
+              valueFrom:
+                secretKeyRef:
+                  name: app-wordpress-secret
+                  key: mysql_password
+            - name: MYSQL_RANDOM_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: app-wordpress-secret
+                  key: mysql_random_root_password
           volumeMounts:
             - name: mysql-storage
               mountPath: /var/lib/mysql

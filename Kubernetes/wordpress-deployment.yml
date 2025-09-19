@@ -26,7 +26,10 @@ spec:
           - name: WORDPRESS_DB_NAME
             value: wordpress
           - name: WORDPRESS_DB_PASSWORD
-            value: secret
+            valueFrom:
+              secretKeyRef:
+                name: app-wordpress-secret
+                key: wordpress_db_password
         volumeMounts:
           - name: wordpress-volume
             mountPath: /var/www/html
