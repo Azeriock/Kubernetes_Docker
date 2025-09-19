@@ -37,4 +37,3 @@ spec:
         - name: wordpress-volume
           hostPath:
             path: /data-wordpress
-            type: DirectoryOrCreate
